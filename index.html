@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Becoming Edit</title>
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Becoming Edit</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>The Becoming Edit</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog/post-1.html">Blog</a>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <div class="container">
+            <h1>The Becoming Edit</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog/post-1.html">Blog</a>
+            </nav>
+        </div>
+    </header>
 
-  <main class="container">
-    <section class="intro">
-      <h2>Build Slow. Grow Intentionally.</h2>
-      <p>This is your go-to space for mindful growth, creative tech projects, and honest reflections from behind the scenes.</p>
-    </section>
+    <main class="container">
+    
+        <section class="intro">
+            <h2>Build Slow. Grow Intentionally.</h2>
+            <p>This is your go-to space for mindful growth, creative tech projects, and honest reflections from behind the scenes.</p>
+        </section>
 
-    <section class="latest-post">
-      <h3>✨ Latest Post</h3>
-      <article>
-        <a href="blog/post-1.html">
-          <h4>How I Built This Minimal Blog with HTML + Netlify</h4>
-        </a>
-        <p>A soft launch into intentional content creation — simple, beautiful, code-based.</p>
-      </article>
-    </section>
-  </main>
+        <section class="latest-post">
+            <h3>✨ Latest Post</h3>
+            <article>
+                <a href="blog/post-1.html">
+                    <h4>How I Built This Minimal Blog with HTML + Netlify</h4>
+                </a>
+                <p>A soft launch into intentional content creation — simple, beautiful, code-based.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section class="subscribe">
+            <section class="subscribe">
+                <h2>Join The Becoming Edit Newsletter</h2>
+                <form name="subscribe" method="POST" data-netlify="true" onsubmit="showThankYou(event)">
+                  <input type="email" name="email" placeholder="Your email address" required>
+                  <button type="submit">Subscribe</button>
+                </form>
+                <p id="thank-you" class="hidden">✨ Thank you for subscribing! You're now part of The Becoming Edit.</p>
+              </section>
+              
+    </footer>
+    <script>
+        function showThankYou(event) {
+          event.preventDefault();
+          const form = event.target;
+          const thankYouMsg = document.getElementById('thank-you');
+      
+          form.style.display = 'none';
+          thankYouMsg.classList.remove('hidden');
+        }
+      </script>
+          
 </body>
 </html>
